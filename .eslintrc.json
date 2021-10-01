@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-console": "off",
+    "linebreak-style": 0,
+    "no-process-exit": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "quotes": [2, "single"],
+    "class-methods-use-this": "off",
+    "no-unused-vars": "off",
+    //FIXME: these rules should be enabled, but they break with alias path resolution
+    "import/no-unresolved": [
+      2, 
+      { "caseSensitive": false }
+    ],
+    "node/no-missing-require": "off"
+    //
+  }
+}
